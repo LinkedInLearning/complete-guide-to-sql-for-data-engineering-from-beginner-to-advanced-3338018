@@ -39,7 +39,7 @@
 	
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "pip install --user -r requirements.txt",
-	"postCreateCommand": "sudo sh .devcontainer/startup.sh",
+	"postCreateCommand": "sudo rm -f /etc/apt/sources.list.d/yarn.list && sudo apt update && sudo sh .devcontainer/startup.sh",
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
 	"onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc" //Set Terminal Prompt to $
